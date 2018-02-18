@@ -1,0 +1,71 @@
+# depslib dependency file v1.0
+1516146809 source:c:\users\aaa\documents\rainmeter\skins\droptop\folders\customfolder4\c++\d&d\main.cpp
+	<iostream>
+	"C_BaseCharacter.h"
+	"C_PlayerCharacter.h"
+
+1516920613 c:\users\aaa\documents\rainmeter\skins\droptop\folders\customfolder4\c++\d&d\c_basecharacter.h
+	<iostream>
+
+1516146910 c:\users\aaa\documents\rainmeter\skins\droptop\folders\customfolder4\c++\d&d\c_playercharacter.h
+	<iostream>
+	"C_BaseCharacter.h"
+
+1518989030 source:c:\users\aaa\documents\rainmeter\skins\droptop\folders\customfolder4\c++\d-d\main.cpp
+	<iostream>
+	<string>
+	<random>
+	<ctime>
+	<chrono>
+	<thread>
+	"C_BaseCharacter.h"
+	"C_PlayerCharacter.h"
+	"C_MonsterCharacter.h"
+	"F_decla.h"
+
+1518989496 c:\users\aaa\documents\rainmeter\skins\droptop\folders\customfolder4\c++\d-d\c_basecharacter.h
+	<iostream>
+
+1518989567 c:\users\aaa\documents\rainmeter\skins\droptop\folders\customfolder4\c++\d-d\c_playercharacter.h
+	<iostream>
+	"C_BaseCharacter.h"
+
+1518989693 source:c:\users\aaa\documents\rainmeter\skins\droptop\folders\customfolder4\c++\d-d\f_def.cpp
+	<iostream>
+	<string>
+	<random>
+	<ctime>
+	<chrono>
+	<thread>
+	"C_BaseCharacter.h"
+	"C_PlayerCharacter.h"
+	"C_MonsterCharacter.h"
+	"F_decla.h"
+
+1518989587 c:\users\aaa\documents\rainmeter\skins\droptop\folders\customfolder4\c++\d-d\c_monstercharacter.h
+	<iostream>
+	"C_BaseCharacter.h"
+
+1518989817 c:\users\aaa\documents\rainmeter\skins\droptop\folders\customfolder4\c++\d-d\f_decla.h
+	<iostream>
+	<string>
+	<random>
+	<ctime>
+	<chrono>
+	<thread>
+	"C_BaseCharacter.h"
+	"C_PlayerCharacter.h"
+	"C_MonsterCharacter.h"
+
+1518989015 source:c:\users\aaa\documents\rainmeter\skins\droptop\folders\customfolder4\c++\d-d\game.cpp
+	<iostream>
+	<string>
+	<random>
+	<ctime>
+	<chrono>
+	<thread>
+	"C_BaseCharacter.h"
+	"C_PlayerCharacter.h"
+	"C_MonsterCharacter.h"
+	"F_decla.h"
+
