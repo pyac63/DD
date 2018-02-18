@@ -35,6 +35,9 @@
 		<Unit filename="C_BaseCharacter.h" />
 		<Unit filename="C_MonsterCharacter.h" />
 		<Unit filename="C_PlayerCharacter.h" />
+		<Unit filename="F_decla.h" />
+		<Unit filename="F_def.cpp" />
+		<Unit filename="game.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

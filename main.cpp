@@ -13,7 +13,7 @@ using namespace std;
 
 int main()
 {
-    cout << "Hello world!" << endl;
+    cout << "Hello world!\n";
 
     string name {enterName()};
     int hp {enterHp()};
