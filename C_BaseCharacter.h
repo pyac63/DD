@@ -77,6 +77,8 @@ public:
     string getName() const {return m_name;}
     bool getAlive() const {return m_alive;}
 
+
+
 };
 
 #endif // C_BASECHARACTER_H

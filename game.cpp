@@ -25,7 +25,12 @@ bool game(Player* antoine)
         int newHp;
         int playerRoll = rollD20(p);
 
-        if (playerRoll >= monster->getCa())
+        if (checkRollFail(playerRoll) || playerRoll < monster->getCa())
+        {
+            cout << "You miss...\n";
+        }
+
+        else
         {
             if (checkRollCrit(playerRoll))
             {
@@ -42,15 +47,15 @@ bool game(Player* antoine)
             }
 
         }
-        else
-        {
-            cout << "You miss...\n";
-        }
 
         if (monster->getHp() <= 0)
             break;
         int monsterRoll = rollD20(m);
-        if (monsterRoll >= antoine->getCa())
+        if (checkRollFail(monsterRoll) || monsterRoll < antoine->getCa())
+        {
+            cout << "Enemy miss...\n";
+        }
+        else
         {
             if (checkRollCrit(monsterRoll))
             {
@@ -67,10 +72,8 @@ bool game(Player* antoine)
             }
             cout << "You now have " << antoine->getHp() << " HP.\n";
         }
-        else
-        {
-            cout << "Enemy miss...\n";
-        }
+
+
     }
     if (antoine->getHp() > 0)
     {

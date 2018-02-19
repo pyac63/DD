@@ -81,7 +81,7 @@
 	"C_MonsterCharacter.h"
 	"F_decla.h"
 
-1519024014 c:\antoine\code\dd\c_basecharacter.h
+1519041226 c:\antoine\code\dd\c_basecharacter.h
 	<iostream>
 
 1519024014 c:\antoine\code\dd\c_playercharacter.h
@@ -92,7 +92,7 @@
 	<iostream>
 	"C_BaseCharacter.h"
 
-1519024014 c:\antoine\code\dd\f_decla.h
+1519041141 c:\antoine\code\dd\f_decla.h
 	<iostream>
 	<string>
 	<random>

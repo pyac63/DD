@@ -26,7 +26,8 @@ void printPlayer (const Player &test);
 void printMonster (const Monster &test);
 int getRandomNumber(int min, int max);
 int rollD20(char character);
-bool checkCrit (int x);
+bool checkRollCrit(int x);
+bool checkRollFail(int x);
 
 
 #endif // F_DECLA_H
