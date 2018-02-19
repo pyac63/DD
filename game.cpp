@@ -27,12 +27,13 @@ bool game(Player* antoine)
 
         if (playerRoll >= monster->getCa())
         {
-            if (checkCrit(playerRoll))
+            if (checkRollCrit(playerRoll))
             {
                 cout << "You hit critically !!\n";
                 newHp = (monster->getHp())-((antoine->getStr())*2);
                 monster->setHp(newHp);
             }
+
             else
             {
                 cout << "You hit !\n";
@@ -51,12 +52,13 @@ bool game(Player* antoine)
         int monsterRoll = rollD20(m);
         if (monsterRoll >= antoine->getCa())
         {
-            if (checkCrit(monsterRoll))
+            if (checkRollCrit(monsterRoll))
             {
                 cout << "Enemy hit critically !!\n";
                 newHp = (antoine->getHp())-((monster->getStr())*2);
                 antoine->setHp(newHp);
             }
+
             else
             {
                 cout << "Enemy hit !\n";

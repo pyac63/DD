@@ -78,9 +78,17 @@ int getRandomNumber(int min, int max)
 	return min + static_cast<int>((max - min + 1) * (mersenne() * fraction));
 }
 
-bool checkCrit(int x)
+bool checkRollCrit(int x)
 {
     if (x == 20)
+        return true;
+    else
+        return false;
+}
+
+bool checkRollFail(int x)
+{
+    if (x == 1)
         return true;
     else
         return false;

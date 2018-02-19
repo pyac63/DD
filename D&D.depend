@@ -69,3 +69,61 @@
 	"C_MonsterCharacter.h"
 	"F_decla.h"
 
+1519024014 source:c:\antoine\code\dd\f_def.cpp
+	<iostream>
+	<string>
+	<random>
+	<ctime>
+	<chrono>
+	<thread>
+	"C_BaseCharacter.h"
+	"C_PlayerCharacter.h"
+	"C_MonsterCharacter.h"
+	"F_decla.h"
+
+1519024014 c:\antoine\code\dd\c_basecharacter.h
+	<iostream>
+
+1519024014 c:\antoine\code\dd\c_playercharacter.h
+	<iostream>
+	"C_BaseCharacter.h"
+
+1519024014 c:\antoine\code\dd\c_monstercharacter.h
+	<iostream>
+	"C_BaseCharacter.h"
+
+1519024014 c:\antoine\code\dd\f_decla.h
+	<iostream>
+	<string>
+	<random>
+	<ctime>
+	<chrono>
+	<thread>
+	"C_BaseCharacter.h"
+	"C_PlayerCharacter.h"
+	"C_MonsterCharacter.h"
+
+1519024014 source:c:\antoine\code\dd\game.cpp
+	<iostream>
+	<string>
+	<random>
+	<ctime>
+	<chrono>
+	<thread>
+	"C_BaseCharacter.h"
+	"C_PlayerCharacter.h"
+	"C_MonsterCharacter.h"
+	"F_decla.h"
+
+1519024014 source:c:\antoine\code\dd\main.cpp
+	<iostream>
+	<string>
+	<random>
+	<ctime>
+	<chrono>
+	<thread>
+	"C_BaseCharacter.h"
+	"C_PlayerCharacter.h"
+	"C_MonsterCharacter.h"
+	"F_decla.h"
+
