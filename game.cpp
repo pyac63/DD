@@ -11,15 +11,15 @@
 
 using namespace std;
 
-bool game(Player* antoine)
+bool game(Player* player)
 {
 
     char p = 'p';
     char m = 'm';
 
-    printPlayer(*antoine);
+    printPlayer(*player);
     Monster *monster = createMonster(6, 13, 20, "Troll");
-    while ((antoine->getHp()) > 0 && (monster->getHp() > 0))
+    while ((player->getHp()) > 0 && (monster->getHp() > 0))
     {
         int newHp;
         int playerRoll = rollD20(p);
@@ -34,14 +34,14 @@ bool game(Player* antoine)
             if (checkRollCrit(playerRoll))
             {
                 cout << "You hit critically !!\n";
-                newHp = (monster->getHp())-((antoine->getStr())*2);
+                newHp = (monster->getHp())-((player->getStr())*2);
                 monster->setHp(newHp);
             }
 
             else
             {
                 cout << "You hit !\n";
-                newHp = (monster->getHp())-(antoine->getStr());
+                newHp = (monster->getHp())-(player->getStr());
                 monster->setHp(newHp);
             }
 
@@ -50,7 +50,7 @@ bool game(Player* antoine)
         if (monster->getHp() <= 0)
             break;
         int monsterRoll = rollD20(m);
-        if (checkRollFail(monsterRoll) || monsterRoll < antoine->getCa())
+        if (checkRollFail(monsterRoll) || monsterRoll < player->getCa())
         {
             cout << "Enemy miss...\n";
         }
@@ -59,22 +59,22 @@ bool game(Player* antoine)
             if (checkRollCrit(monsterRoll))
             {
                 cout << "Enemy hit critically !!\n";
-                newHp = (antoine->getHp())-((monster->getStr())*2);
-                antoine->setHp(newHp);
+                newHp = (player->getHp())-((monster->getStr())*2);
+                player->setHp(newHp);
             }
 
             else
             {
                 cout << "Enemy hit !\n";
-                newHp = (antoine->getHp())-(monster->getStr());
-                antoine->setHp(newHp);
+                newHp = (player->getHp())-(monster->getStr());
+                player->setHp(newHp);
             }
-            cout << "You now have " << antoine->getHp() << " HP.\n";
+            cout << "You now have " << player->getHp() << " HP.\n";
         }
 
 
     }
-    if (antoine->getHp() > 0)
+    if (player->getHp() > 0)
     {
         cout << "Congratulations ! You defeated the monster !\n";
 

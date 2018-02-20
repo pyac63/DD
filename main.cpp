@@ -19,15 +19,15 @@ int main()
     int hp {enterHp()};
     int str {enterStr()};
     int ca {enterCa()};
-    Player *antoine = createPlayer(str, ca, hp, name);
-    while (antoine->getAlive())
+    Player *player = createPlayer(str, ca, hp, name);
+    while (player->getAlive())
     {
-        antoine->setState(game(antoine));
+        player->setState(game(player));
     }
 
 
-    delete antoine;
-    antoine = nullptr;
+    delete player;
+    player = nullptr;
 
     return 0;
 }

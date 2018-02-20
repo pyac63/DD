@@ -15,7 +15,7 @@
 
 using namespace std;
 
-bool game(Player *antoine);
+bool game(Player *player);
 Player* createPlayer(int str, int ca, int hp, string name);
 Monster* createMonster(int str, int ca, int hp, string name);
 string enterName();
