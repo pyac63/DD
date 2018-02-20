@@ -21,6 +21,7 @@ bool game(Player* player)
     Monster *monster = createMonster(6, 13, 20, "Troll");
     while ((player->getHp()) > 0 && (monster->getHp() > 0))
     {
+        cout << monster->getCha() << '\n';
         int newHp;
         int playerRoll = rollD20(p);
 
