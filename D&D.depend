@@ -81,14 +81,16 @@
 	"C_MonsterCharacter.h"
 	"F_decla.h"
 
-1519041226 c:\antoine\code\dd\c_basecharacter.h
+1519128391 c:\antoine\code\dd\c_basecharacter.h
 	<iostream>
+	<random>
+	<ctime>
 
-1519024014 c:\antoine\code\dd\c_playercharacter.h
+1519128017 c:\antoine\code\dd\c_playercharacter.h
 	<iostream>
 	"C_BaseCharacter.h"
 
-1519127693 c:\antoine\code\dd\c_monstercharacter.h
+1519128039 c:\antoine\code\dd\c_monstercharacter.h
 	<iostream>
 	"C_BaseCharacter.h"
 
@@ -103,7 +105,7 @@
 	"C_PlayerCharacter.h"
 	"C_MonsterCharacter.h"
 
-1519125899 source:c:\antoine\code\dd\game.cpp
+1519128552 source:c:\antoine\code\dd\game.cpp
 	<iostream>
 	<string>
 	<random>
