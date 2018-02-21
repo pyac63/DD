@@ -4,10 +4,11 @@
 #include <ctime>
 #include <chrono>
 #include <thread>
+#include "F_decla.h"
 #include "C_BaseCharacter.h"
 #include "C_PlayerCharacter.h"
 #include "C_MonsterCharacter.h"
-#include "F_decla.h"
+
 
 using namespace std;
 
