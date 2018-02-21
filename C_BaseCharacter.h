@@ -87,10 +87,13 @@ public:
 	return min + static_cast<int>((max - min + 1) * (mersenne() * fraction));
     }
 
-    int rollD4()
-    {
-        return getRandomNumber(1, 4);
-    }
+    friend int rollD4();
+    friend int rollD6();
+    friend int rollD8();
+    friend int rollD10();
+    friend int rollD12();
+    friend int rollD20();
+    friend int rollD100();
 
 
 

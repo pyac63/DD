@@ -25,9 +25,16 @@ int enterCa();
 void printPlayer (const Player &test);
 void printMonster (const Monster &test);
 int getRandomNumber(int min, int max);
-int rollD20(char character);
 bool checkRollCrit(int x);
 bool checkRollFail(int x);
+int rollD4();
+int rollD6();
+int rollD8();
+int rollD10();
+int rollD12();
+int rollD20(char character);
+int rollD100();
+
 
 
 #endif // F_DECLA_H

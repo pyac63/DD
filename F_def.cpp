@@ -94,6 +94,31 @@ bool checkRollFail(int x)
         return false;
 }
 
+int rollD4()
+{
+    return getRandomNumber(1, 4);
+}
+
+int rollD6()
+{
+    return getRandomNumber(1, 6);
+}
+
+int rollD8()
+{
+    return getRandomNumber(1, 8);
+}
+
+int rollD10()
+{
+    return getRandomNumber(1, 10);
+}
+
+int rollD12()
+{
+    return getRandomNumber(1, 12);
+}
+
 int rollD20 (char character)
 {
     using namespace std::this_thread;
@@ -138,4 +163,9 @@ int rollD20 (char character)
     return result;
 
 
+}
+
+int rollD100()
+{
+    return getRandomNumber(1, 100);
 }
