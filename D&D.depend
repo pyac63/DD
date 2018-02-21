@@ -86,8 +86,9 @@
 	<random>
 	<ctime>
 
-1519128017 c:\antoine\code\dd\c_playercharacter.h
+1519217310 c:\antoine\code\dd\c_playercharacter.h
 	<iostream>
+	<bitset>
 	"C_BaseCharacter.h"
 
 1519128039 c:\antoine\code\dd\c_monstercharacter.h
