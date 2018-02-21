@@ -17,6 +17,7 @@ bool game(Player* player)
     char p = 'p';
     char m = 'm';
 
+
     printPlayer(*player);
     Monster *monster = createMonster(6, 13, 20, "Troll");
     while ((player->getHp()) > 0 && (monster->getHp() > 0))

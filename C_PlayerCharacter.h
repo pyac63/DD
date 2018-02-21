@@ -75,11 +75,7 @@ public:
     {
     }
 
-    int rollD4()
-    {
-        cout << "Rolling a d4!\n";
-        return getRandomNumber(1, 4);
-    }
+
 
 };
 #endif // C_PLAYERCHARACTER_H
