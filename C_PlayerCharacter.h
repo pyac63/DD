@@ -79,6 +79,7 @@ public:
     void printWeapon()
     {
         cout << "You will fight with a " << weapon->weaponName << '\n';
+        cout << weapon->weaponAttributes << '\n';
     }
 
 };

@@ -20,7 +20,7 @@ bool game(Player* player)
 
 
     printPlayer(*player);
-    Weapon *playerweapon = createWeapon(1);
+    Weapon *playerweapon = createWeapon(3);
     assignWeapon(player, playerweapon);
     player->printWeapon();
     Monster *monster = createMonster(6, 13, 20, "Troll");

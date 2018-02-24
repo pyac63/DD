@@ -23,6 +23,8 @@ struct Weapon
         * 5 : Versatile
         */
         bitset<6> weaponAttributes;
+        bool commom = false;
+        bool war = false;
 
 
     };
