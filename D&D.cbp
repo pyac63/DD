@@ -37,6 +37,8 @@
 		<Unit filename="C_PlayerCharacter.h" />
 		<Unit filename="F_decla.h" />
 		<Unit filename="F_def.cpp" />
+		<Unit filename="Fcn_CreateWeapon.cpp" />
+		<Unit filename="Str_Weapon.h" />
 		<Unit filename="game.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>

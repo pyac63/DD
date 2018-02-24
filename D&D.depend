@@ -23,17 +23,18 @@
 	"C_MonsterCharacter.h"
 	"F_decla.h"
 
-1519253024 c:\users\aaa\documents\rainmeter\skins\droptop\folders\customfolder4\c++\d-d\c_basecharacter.h
+1519477100 c:\users\aaa\documents\rainmeter\skins\droptop\folders\customfolder4\c++\d-d\c_basecharacter.h
 	<iostream>
 	<random>
 	<ctime>
 
-1519253255 c:\users\aaa\documents\rainmeter\skins\droptop\folders\customfolder4\c++\d-d\c_playercharacter.h
+1519479967 c:\users\aaa\documents\rainmeter\skins\droptop\folders\customfolder4\c++\d-d\c_playercharacter.h
 	<iostream>
 	<bitset>
 	"C_BaseCharacter.h"
+	"Str_Weapon.h"
 
-1519252719 source:c:\users\aaa\documents\rainmeter\skins\droptop\folders\customfolder4\c++\d-d\f_def.cpp
+1519480084 source:c:\users\aaa\documents\rainmeter\skins\droptop\folders\customfolder4\c++\d-d\f_def.cpp
 	<iostream>
 	<string>
 	<random>
@@ -45,11 +46,11 @@
 	"C_MonsterCharacter.h"
 	"F_decla.h"
 
-1519234527 c:\users\aaa\documents\rainmeter\skins\droptop\folders\customfolder4\c++\d-d\c_monstercharacter.h
+1519425234 c:\users\aaa\documents\rainmeter\skins\droptop\folders\customfolder4\c++\d-d\c_monstercharacter.h
 	<iostream>
 	"C_BaseCharacter.h"
 
-1519253235 c:\users\aaa\documents\rainmeter\skins\droptop\folders\customfolder4\c++\d-d\f_decla.h
+1519479752 c:\users\aaa\documents\rainmeter\skins\droptop\folders\customfolder4\c++\d-d\f_decla.h
 	<iostream>
 	<string>
 	<random>
@@ -60,17 +61,17 @@
 	"C_PlayerCharacter.h"
 	"C_MonsterCharacter.h"
 
-1518989015 source:c:\users\aaa\documents\rainmeter\skins\droptop\folders\customfolder4\c++\d-d\game.cpp
+1519479853 source:c:\users\aaa\documents\rainmeter\skins\droptop\folders\customfolder4\c++\d-d\game.cpp
 	<iostream>
 	<string>
 	<random>
 	<ctime>
 	<chrono>
 	<thread>
-	"C_BaseCharacter.h"
-	"C_PlayerCharacter.h"
-	"C_MonsterCharacter.h"
 	"F_decla.h"
+	"C_BaseCharacter.h"
+	"C_PlayerCharacter.h"
+	"C_MonsterCharacter.h"
 
 1519040443 source:c:\antoine\code\dd\f_def.cpp
 	<iostream>
@@ -132,4 +133,13 @@
 	"C_PlayerCharacter.h"
 	"C_MonsterCharacter.h"
 	"F_decla.h"
+
+1519426255 c:\users\aaa\documents\rainmeter\skins\droptop\folders\customfolder4\c++\d-d\str_weapon.h
+	<iostream>
+	<string>
+	<bitset>
+
+1519480132 source:c:\users\aaa\documents\rainmeter\skins\droptop\folders\customfolder4\c++\d-d\fcn_createweapon.cpp
+	<iostream>
+	"Str_Weapon.h"
 

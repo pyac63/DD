@@ -20,6 +20,9 @@ bool game(Player* player)
 
 
     printPlayer(*player);
+    Weapon *playerweapon = createWeapon(1);
+    assignWeapon(player, playerweapon);
+    player->printWeapon();
     Monster *monster = createMonster(6, 13, 20, "Troll");
     while ((player->getHp()) > 0 && (monster->getHp() > 0))
     {
@@ -83,6 +86,8 @@ bool game(Player* player)
 
         delete monster;
         monster = nullptr;
+        delete playerweapon;
+        playerweapon = nullptr;
         return 1;
     }
     else
@@ -91,6 +96,8 @@ bool game(Player* player)
 
         delete monster;
         monster = nullptr;
+        delete playerweapon;
+        playerweapon = nullptr;
         return 0;
     }
 

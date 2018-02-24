@@ -169,3 +169,10 @@ int rollD100()
 {
     return getRandomNumber(1, 100);
 }
+
+
+void assignWeapon (Player* &player, Weapon* &weaponToAssign)
+{
+    player->weapon = weaponToAssign;
+
+}

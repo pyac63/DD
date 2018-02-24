@@ -79,6 +79,14 @@ public:
     string getName() const {return m_name;}
     bool getAlive() const {return m_alive;}
 
+    friend int rollD4();
+    friend int rollD6();
+    friend int rollD8();
+    friend int rollD10();
+    friend int rollD12();
+    friend int rollD20(char character);
+    friend int rollD100();
+
 };
 
 #endif // C_BASECHARACTER_H

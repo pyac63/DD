@@ -34,6 +34,8 @@ int rollD10();
 int rollD12();
 int rollD20(char character);
 int rollD100();
+void assignWeapon (Player* &player, Weapon* &weaponToAssign);
+Weapon* createWeapon(int x);
 
 
 

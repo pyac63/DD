@@ -4,7 +4,7 @@
 #include <iostream>
 #include <bitset>
 #include "C_BaseCharacter.h"
-
+#include "Str_Weapon.h"
 
 using namespace std;
 
@@ -48,25 +48,14 @@ protected:
     */
     bitset<18> skillsProficiencies;
 
-    struct weapon
-    {
-        string weaponName;
-        int weaponDamageRoll;
-        int weaponVersatileDamageRoll;
-        /*
-        * Next bitset serves for the weapon's attributes,
-        * Index are the followings:
-        * 0 : Two Handed
-        * 1 : Finesse
-        * 2 : Heavy
-        * 3 : Light
-        * 4 : Thrown
-        * 5 : Versatile
-        */
-        bitset<6> weaponAttributes;
 
 
-    };
+
+
+
+
+
+
 
 public:
 
@@ -76,6 +65,21 @@ public:
     }
 
 
+    ~Player()
+    {
+        delete weapon;
+        weapon = nullptr;
+        delete weapon2;
+        weapon2 = nullptr;
+    }
+
+    Weapon* weapon = nullptr;
+    Weapon* weapon2 = nullptr;
+
+    void printWeapon()
+    {
+        cout << "You will fight with a " << weapon->weaponName << '\n';
+    }
 
 };
 #endif // C_PLAYERCHARACTER_H
