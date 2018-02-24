@@ -21,7 +21,9 @@ bool game(Player* player)
 
     printPlayer(*player);
     Weapon *playerweapon = createWeapon(3);
-    assignWeapon(player, playerweapon);
+    Weapon *playerweapon2 = createWeapon(15);
+    player->assignWeapon(playerweapon);
+    player->assignWeapon(playerweapon2);
     player->printWeapon();
     Monster *monster = createMonster(6, 13, 20, "Troll");
     while ((player->getHp()) > 0 && (monster->getHp() > 0))

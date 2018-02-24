@@ -171,8 +171,3 @@ int rollD100()
 }
 
 
-void assignWeapon (Player* &player, Weapon* &weaponToAssign)
-{
-    player->weapon = weaponToAssign;
-
-}

@@ -39,7 +39,7 @@ Weapon* createWeapon(int x)
             roll = 4;
             rollversatile = 0;
             attributes = 26;
-            commom = true
+            commom = true;
             break;
         }
     case 3:

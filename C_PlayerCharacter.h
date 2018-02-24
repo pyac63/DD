@@ -76,10 +76,31 @@ public:
     Weapon* weapon = nullptr;
     Weapon* weapon2 = nullptr;
 
+    void assignWeapon (Weapon* &weaponToAssign)
+    {
+        if (weapon == nullptr)
+        {
+            weapon = weaponToAssign;
+        }
+        else if (weapon != nullptr)
+        {
+            weapon2 = weaponToAssign;
+        }
+
+
+    }
+
+
     void printWeapon()
     {
         cout << "You will fight with a " << weapon->weaponName << '\n';
+        cout << "The damage die will be a d" << weapon->weaponDamageRoll << '\n';
         cout << weapon->weaponAttributes << '\n';
+        if (weapon2 != nullptr)
+        {
+            cout << "You will also fight with a " << weapon2->weaponName << '\n';
+            cout << "The damage die will be a d" << weapon2->weaponDamageRoll << '\n';
+        }
     }
 
 };
