@@ -35,6 +35,7 @@ int rollD12();
 int rollD20(char character);
 int rollD100();
 Weapon* createWeapon(int x);
+int getCaracRoll();
 
 
 
