@@ -24,11 +24,6 @@ public:
 
     }
 
-
-
-
-
-
 };
 #endif // C_MONSTERCHARACTER_H
 

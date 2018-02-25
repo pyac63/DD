@@ -28,7 +28,7 @@
 	<random>
 	<ctime>
 
-1519515882 c:\users\aaa\documents\rainmeter\skins\droptop\folders\customfolder4\c++\d-d\c_playercharacter.h
+1519598707 c:\users\aaa\documents\rainmeter\skins\droptop\folders\customfolder4\c++\d-d\c_playercharacter.h
 	<iostream>
 	<bitset>
 	"C_BaseCharacter.h"
@@ -46,22 +46,23 @@
 	"C_MonsterCharacter.h"
 	"F_decla.h"
 
-1519425234 c:\users\aaa\documents\rainmeter\skins\droptop\folders\customfolder4\c++\d-d\c_monstercharacter.h
+1519598503 c:\users\aaa\documents\rainmeter\skins\droptop\folders\customfolder4\c++\d-d\c_monstercharacter.h
 	<iostream>
 	"C_BaseCharacter.h"
 
-1519596111 c:\users\aaa\documents\rainmeter\skins\droptop\folders\customfolder4\c++\d-d\f_decla.h
+1519598125 c:\users\aaa\documents\rainmeter\skins\droptop\folders\customfolder4\c++\d-d\f_decla.h
 	<iostream>
 	<string>
 	<random>
 	<ctime>
 	<chrono>
 	<thread>
+	<vector>
 	"C_BaseCharacter.h"
 	"C_PlayerCharacter.h"
 	"C_MonsterCharacter.h"
 
-1519515840 source:c:\users\aaa\documents\rainmeter\skins\droptop\folders\customfolder4\c++\d-d\game.cpp
+1519598471 source:c:\users\aaa\documents\rainmeter\skins\droptop\folders\customfolder4\c++\d-d\game.cpp
 	<iostream>
 	<string>
 	<random>
@@ -142,4 +143,10 @@
 1519515366 source:c:\users\aaa\documents\rainmeter\skins\droptop\folders\customfolder4\c++\d-d\fcn_createweapon.cpp
 	<iostream>
 	"Str_Weapon.h"
+
+1519597971 source:c:\users\aaa\documents\rainmeter\skins\droptop\folders\customfolder4\c++\d-d\fcn_getcaracroll.cpp
+	<iostream>
+	<vector>
+	<utility>
+	"F_decla.h"
 

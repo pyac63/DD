@@ -48,6 +48,8 @@ protected:
     */
     bitset<18> skillsProficiencies;
 
+    vector<int> caracRoll;
+
 
 
 
@@ -86,8 +88,6 @@ public:
         {
             weapon2 = weaponToAssign;
         }
-
-
     }
 
 
@@ -95,7 +95,6 @@ public:
     {
         cout << "You will fight with a " << weapon->weaponName << '\n';
         cout << "The damage die will be a d" << weapon->weaponDamageRoll << '\n';
-        cout << weapon->weaponAttributes << '\n';
         if (weapon2 != nullptr)
         {
             cout << "You will also fight with a " << weapon2->weaponName << '\n';
@@ -103,5 +102,15 @@ public:
         }
     }
 
+   void assignCaracRoll(const vector<int> &vect)
+   {
+       caracRoll = vect;
+   }
+
+   void printCarac()
+   {
+       for (auto const &element: caracRoll)
+            cout << element << endl;
+   }
 };
 #endif // C_PLAYERCHARACTER_H

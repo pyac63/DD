@@ -8,6 +8,7 @@
 #include <ctime>
 #include <chrono>
 #include <thread>
+#include <vector>
 #include "C_BaseCharacter.h"
 #include "C_PlayerCharacter.h"
 #include "C_MonsterCharacter.h"
@@ -35,7 +36,7 @@ int rollD12();
 int rollD20(char character);
 int rollD100();
 Weapon* createWeapon(int x);
-int getCaracRoll();
+vector<int> getCaracRoll();
 
 
 
