@@ -75,7 +75,7 @@
 	"C_PlayerCharacter.h"
 	"C_MonsterCharacter.h"
 
-1519629505 source:c:\antoine\code\dd\f_def.cpp
+1519716441 source:c:\antoine\code\dd\f_def.cpp
 	<iostream>
 	<string>
 	<random>
@@ -87,22 +87,23 @@
 	"C_MonsterCharacter.h"
 	"F_decla.h"
 
-1519629505 c:\antoine\code\dd\c_basecharacter.h
+1519716441 c:\antoine\code\dd\c_basecharacter.h
 	<iostream>
 	<random>
 	<ctime>
+	<vector>
 
-1519646085 c:\antoine\code\dd\c_playercharacter.h
+1519734126 c:\antoine\code\dd\c_playercharacter.h
 	<iostream>
 	<bitset>
 	"C_BaseCharacter.h"
 	"Str_Weapon.h"
 
-1519629505 c:\antoine\code\dd\c_monstercharacter.h
+1519716441 c:\antoine\code\dd\c_monstercharacter.h
 	<iostream>
 	"C_BaseCharacter.h"
 
-1519629505 c:\antoine\code\dd\f_decla.h
+1519716441 c:\antoine\code\dd\f_decla.h
 	<iostream>
 	<string>
 	<random>
@@ -114,7 +115,7 @@
 	"C_PlayerCharacter.h"
 	"C_MonsterCharacter.h"
 
-1519629505 source:c:\antoine\code\dd\game.cpp
+1519734171 source:c:\antoine\code\dd\game.cpp
 	<iostream>
 	<string>
 	<random>
@@ -126,7 +127,7 @@
 	"C_PlayerCharacter.h"
 	"C_MonsterCharacter.h"
 
-1519125899 source:c:\antoine\code\dd\main.cpp
+1519723040 source:c:\antoine\code\dd\main.cpp
 	<iostream>
 	<string>
 	<random>
@@ -171,5 +172,11 @@
 1519690396 source:c:\users\aaa\documents\rainmeter\skins\droptop\folders\customfolder4\c++\d-d\c_playercharacter_fcn_def.cpp
 	<iostream>
 	<vector>
+	"C_PlayerCharacter.h"
+
+1519723000 source:c:\antoine\code\dd\c_playercharacter_fcn_def.cpp
+	<iostream>
+	<vector>
+	<algorithm>
 	"C_PlayerCharacter.h"
 

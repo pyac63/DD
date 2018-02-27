@@ -82,8 +82,9 @@ public:
     void assignWeapon (Weapon* &weaponToAssign);
     void printWeapon();
     void assignCaracRoll(const vector<int> &vect);
-    void printCarac();
+    void printCaracAndMod();
     int getCaracMod(int x);
     void assignCaracAndMod();
+    int getInput1to6();
 };
 #endif // C_PLAYERCHARACTER_H

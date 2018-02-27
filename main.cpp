@@ -17,11 +17,9 @@ int main()
 
     string name {enterName()};
     int hp {enterHp()};
-    int str {enterStr()};
     int ca {enterCa()};
     Player *player = createPlayer();
     player->setName(name);
-    player->setStr(str);
     player->setHp(hp);
     player->setCa(ca);
     while (player->getAlive())

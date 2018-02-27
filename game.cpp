@@ -26,8 +26,9 @@ bool game(Player* player)
     player->assignWeapon(playerweapon2);
     //player->printWeapon();
     player->assignCaracRoll(getCaracRoll());
-    player->printCarac();
+    //player->printCarac();
     player->assignCaracAndMod();
+    player->printCaracAndMod();
     Monster *monster = createMonster();
     monster->setName("Beholder");
     monster->setHp(15);

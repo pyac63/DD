@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 #include "C_PlayerCharacter.h"
 
 using namespace std;
@@ -34,11 +35,12 @@ void Player::assignCaracRoll(const vector<int> &vect)
     caracRoll = vect;
 }
 
-void Player::printCarac()
+void Player::printCaracAndMod()
 {
-    for (auto const &element: caracRoll)
-        cout << element << " ";
-    cout << "\n";
+    for (int x = 0; x < 6; ++x)
+    {
+        cout << x+1 << ") " << caracName.at(x) << "\t*Set with: " << m_caracArray.at(x) << "* Mod is: " << m_modArray.at(x) << "*\n";
+    }
 }
 
 int Player::getCaracMod(int x)
@@ -107,24 +109,72 @@ int Player::getCaracMod(int x)
        return mod;
 }
 
+int Player::getInput1to6()
+{
+    while (1)
+    {
+        cout << "To which Characteristic do you want to assign it ?" << endl;
+        for (int countup = 0; countup < 6; ++countup)
+        {
+            if (m_caracArray.at(countup) != 0)
+            {
+                cout << countup+1 << ") " << caracName.at(countup) << "\t*Set with " << m_caracArray.at(countup) << "*\n";
+            }
+            else
+                cout << countup+1 << ") " << caracName.at(countup) << endl;
+        }
+        int check;
+        cin >> check;
+        if (check < 1 || check > 6)
+        {
+            if (cin.fail())
+            {
+                cin.clear();
+                cin.ignore(32767, '\n');
+                cout << "\n*Please enter a number.*\n\n";
+            }
+            else
+            {
+                cin.clear();
+                cin.ignore(32767, '\n');
+                cout << "\n*Invalid entry, please retry.*\n\n";
+            }
+
+        }
+        else if (m_caracArray.at(check-1) != 0)
+        {
+            cin.clear();
+            cin.ignore(32767, '\n');
+            cout << "\n*You already set your " << caracName.at(check-1) << "!. Please set another one.*\n\n";
+        }
+        else
+        {
+            cin.ignore(32767, '\n');
+            return check;
+        }
+
+    }
+}
 
 void Player::assignCaracAndMod()
 {
     vector<int> temp = caracRoll;
-    bool check = true;
+    sort(temp.begin(), temp.end());
     cout << "Your characteristics rolls are ready! \n";
     for (int iterate = 0; iterate < 6; ++iterate)
     {
-        string name = caracName.at(iterate);
-        cout << "Which one would you want to assign to " << name << " ?\n";
-        int x;
-        cin >> x;
-        if (x == temp.at(0) || x == temp.at(1) || x == temp.at(2) || x == temp.at(3) || x == temp.at(5) || x == temp.at(5))
-        {
-            m_caracArray.at(iterate) = x;
-            m_modArray.at(iterate) = getCaracMod(x);
-            cout << "You assigned " << m_caracArray.at(iterate) << " to " << name << ". Your " << name << " modifier will be: " << m_modArray.at(iterate) << endl;
-        }
+
+            int result = temp.back();
+            cout << "Your highest roll is " << result << endl;
+            int x = getInput1to6();
+            m_caracArray.at(x-1) = result;
+            m_modArray.at(x-1) = getCaracMod(result);
+            cout << "You assigned " << m_caracArray.at(x-1) << " to " << caracName.at(x-1) << ". Your " << caracName.at(x-1) << " modifier will be: " << m_modArray.at(x-1) << endl;
+
+            temp.pop_back();
+            //--countDown;
+
+
     }
 }
 
