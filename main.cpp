@@ -19,7 +19,11 @@ int main()
     int hp {enterHp()};
     int str {enterStr()};
     int ca {enterCa()};
-    Player *player = createPlayer(str, ca, hp, name);
+    Player *player = createPlayer();
+    player->setName(name);
+    player->setStr(str);
+    player->setHp(hp);
+    player->setCa(ca);
     while (player->getAlive())
     {
         player->setState(game(player));

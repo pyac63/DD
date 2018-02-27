@@ -60,11 +60,7 @@ protected:
 
 
 public:
-
-    Player(int str, int ca, int hp, string name)
-        : BaseCharacter(str, ca, hp, name)
-    {
-    }
+    Player(){}
 
 
     ~Player()
@@ -75,88 +71,19 @@ public:
         weapon2 = nullptr;
     }
 
+    vector<string> caracName {"Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"};
+
+
     Weapon* weapon = nullptr;
     Weapon* weapon2 = nullptr;
 
-    void assignWeapon (Weapon* &weaponToAssign)
-    {
-        if (weapon == nullptr)
-        {
-            weapon = weaponToAssign;
-        }
-        else if (weapon != nullptr)
-        {
-            weapon2 = weaponToAssign;
-        }
-    }
+    // Definitions of the followings are on C_PlayerCharacter_Fcn_Def.cpp
 
-
-    void printWeapon()
-    {
-        cout << "You will fight with a " << weapon->weaponName << '\n';
-        cout << "The damage die will be a d" << weapon->weaponDamageRoll << '\n';
-        if (weapon2 != nullptr)
-        {
-            cout << "You will also fight with a " << weapon2->weaponName << '\n';
-            cout << "The damage die will be a d" << weapon2->weaponDamageRoll << '\n';
-        }
-    }
-
-   void assignCaracRoll(const vector<int> &vect)
-   {
-       caracRoll = vect;
-   }
-
-   void printCarac()
-   {
-       for (auto const &element: caracRoll)
-            cout << element << " ";
-   }
-
-   int getCaracMod(int x)
-   {
-       switch (x)
-       {
-       case 2: return -4;
-       case 3: return -4;
-       case 4: return -3;
-       case 5: return -3;
-       case 6: return -2;
-       case 7: return -2;
-       case 8: return -1;
-       case 9: return -1;
-       case 10: return 0;
-       case 11: return 0;
-       case 12: return 1;
-       case 13: return 1;
-       case 14: return 2;
-       case 15: return 2;
-       case 16: return 3;
-       case 17: return 3;
-       case 18: return 4;
-       case 19: return 4;
-       case 20: return 5;
-       }
-   }
-
-   void assignCaracAndMod()
-   {
-        bool check = true;
-        cout << "Your characteristics rolls are ready! \n";
-        printCarac();
-        cout << "Which one would you want to assign to Strength ?\n";
-        while (check)
-        {
-            int x;
-            cin >> x;
-            if (x == caracRoll.at(0) || x == caracRoll.at(1) || x == caracRoll.at(2) || x == caracRoll.at(3) || x == caracRoll.at(5) || x == caracRoll.at(5))
-            {
-                m_str = x;
-                m_strMod = getCaracMod(m_str);
-                check = false;
-            }
-        }
-
-   }
+    void assignWeapon (Weapon* &weaponToAssign);
+    void printWeapon();
+    void assignCaracRoll(const vector<int> &vect);
+    void printCarac();
+    int getCaracMod(int x);
+    void assignCaracAndMod();
 };
 #endif // C_PLAYERCHARACTER_H

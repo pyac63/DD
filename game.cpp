@@ -19,15 +19,20 @@ bool game(Player* player)
     char m = 'm';
 
 
-    printPlayer(*player);
+    //printPlayer(*player);
     Weapon *playerweapon = createWeapon(3);
     Weapon *playerweapon2 = createWeapon(15);
     player->assignWeapon(playerweapon);
     player->assignWeapon(playerweapon2);
-    player->printWeapon();
+    //player->printWeapon();
     player->assignCaracRoll(getCaracRoll());
     player->printCarac();
-    Monster *monster = createMonster(6, 13, 20, "Troll");
+    player->assignCaracAndMod();
+    Monster *monster = createMonster();
+    monster->setName("Beholder");
+    monster->setHp(15);
+    monster->setCa(12);
+    monster->setStr(13);
     while ((player->getHp()) > 0 && (monster->getHp() > 0))
     {
         //cout << monster->getCha() << '\n';

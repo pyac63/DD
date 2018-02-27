@@ -12,14 +12,12 @@ protected:
     string m_race;
 
 public:
-
-    Monster(int str, int ca, int hp, string name)
-        : BaseCharacter(str, ca, hp, name)
+    Monster(int x)
     {
-        m_cha = 15;
+
     }
 
-    Monster(int x)
+    Monster()
     {
 
     }

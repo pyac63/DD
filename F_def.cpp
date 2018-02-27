@@ -11,14 +11,14 @@
 
 using namespace std;
 
-Player* createPlayer(int str, int ca, int hp, string name)
+Player* createPlayer()
 {
-    return new Player(str, ca, hp, name);
+    return new Player();
 }
 
-Monster* createMonster(int str, int ca, int hp, string name)
+Monster* createMonster()
 {
-    return new Monster(str, ca, hp, name);
+    return new Monster();
 }
 
 string enterName()
