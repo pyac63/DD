@@ -16,20 +16,29 @@ int main()
     intro();
 
     string name {enterName()};
-    //int hp {enterHp()};
-    //int ca {enterCa()};
     Player *player = createPlayer();
     player->setName(name);
-    player->setHp(13);
+    player->setHp(1);
     player->setCa(16);
+    Weapon *playerweapon = createWeapon(3);
+    Weapon *playerweapon2 = createWeapon(15);
+    player->assignWeapon(playerweapon);
+    player->assignWeapon(playerweapon2);
+    player->assignCaracRoll(getCaracRoll());
+    player->assignCaracAndMod();
+    player->printCaracAndMod();
     while (player->getAlive())
     {
         player->setState(game(player));
     }
 
 
+    delete playerweapon;
+    //playerweapon = nullptr;
+    delete playerweapon2;
+    //playerweapon2 = nullptr;
     delete player;
-    player = nullptr;
+    //player = nullptr;
 
     return 0;
 }

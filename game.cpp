@@ -18,17 +18,6 @@ bool game(Player* player)
     char p = 'p';
     char m = 'm';
 
-
-    //printPlayer(*player);
-    Weapon *playerweapon = createWeapon(3);
-    Weapon *playerweapon2 = createWeapon(15);
-    player->assignWeapon(playerweapon);
-    player->assignWeapon(playerweapon2);
-    //player->printWeapon();
-    player->assignCaracRoll(getCaracRoll());
-    //player->printCarac();
-    player->assignCaracAndMod();
-    player->printCaracAndMod();
     Monster *monster = createMonster();
     monster->setName("Goblin");
     monster->setHp(15);
@@ -65,7 +54,8 @@ bool game(Player* player)
 
         if (monster->getHp() <= 0)
             break;
-        int monsterRoll = rollD20(m);
+        int monsterRoll = 20;
+        //int monsterRoll = rollD20(m);
         if (checkRollFail(monsterRoll) || monsterRoll < player->getCa())
         {
             cout << "Enemy miss...\n";
@@ -92,12 +82,10 @@ bool game(Player* player)
     }
     if (player->getHp() > 0)
     {
-        cout << "Congratulations ! You defeated the monster !\n";
+        cout << "Congratulations ! You defeated the " << monster->getName() << "!\n";
 
         delete monster;
         monster = nullptr;
-        delete playerweapon;
-        playerweapon = nullptr;
         return 1;
     }
     else
@@ -106,8 +94,6 @@ bool game(Player* player)
 
         delete monster;
         monster = nullptr;
-        delete playerweapon;
-        playerweapon = nullptr;
         return 0;
     }
 
