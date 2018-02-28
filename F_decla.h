@@ -16,6 +16,7 @@
 
 using namespace std;
 
+void intro();
 bool game(Player *player);
 Player* createPlayer();
 Monster* createMonster();

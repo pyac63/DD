@@ -13,15 +13,15 @@ using namespace std;
 
 int main()
 {
-    cout << "Hello world!\n";
+    intro();
 
     string name {enterName()};
-    int hp {enterHp()};
-    int ca {enterCa()};
+    //int hp {enterHp()};
+    //int ca {enterCa()};
     Player *player = createPlayer();
     player->setName(name);
-    player->setHp(hp);
-    player->setCa(ca);
+    player->setHp(13);
+    player->setCa(16);
     while (player->getAlive())
     {
         player->setState(game(player));

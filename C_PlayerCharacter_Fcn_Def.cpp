@@ -41,6 +41,7 @@ void Player::printCaracAndMod()
     {
         cout << x+1 << ") " << caracName.at(x) << "\t*Set with: " << m_caracArray.at(x) << "* Mod is: " << m_modArray.at(x) << "*\n";
     }
+    cout << "\n\n";
 }
 
 int Player::getCaracMod(int x)
@@ -113,7 +114,7 @@ int Player::getInput1to6()
 {
     while (1)
     {
-        cout << "To which Characteristic do you want to assign it ?" << endl;
+        cout << "To which Characteristic do you want to assign it ?" << "\n\n";
         for (int countup = 0; countup < 6; ++countup)
         {
             if (m_caracArray.at(countup) != 0)
@@ -160,7 +161,7 @@ void Player::assignCaracAndMod()
 {
     vector<int> temp = caracRoll;
     sort(temp.begin(), temp.end());
-    cout << "Your characteristics rolls are ready! \n";
+    cout << "\nYour characteristics rolls are ready, " << m_name << "!\n\n";
     for (int iterate = 0; iterate < 6; ++iterate)
     {
 
@@ -169,7 +170,7 @@ void Player::assignCaracAndMod()
             int x = getInput1to6();
             m_caracArray.at(x-1) = result;
             m_modArray.at(x-1) = getCaracMod(result);
-            cout << "You assigned " << m_caracArray.at(x-1) << " to " << caracName.at(x-1) << ". Your " << caracName.at(x-1) << " modifier will be: " << m_modArray.at(x-1) << endl;
+            cout << "You assigned " << m_caracArray.at(x-1) << " to " << caracName.at(x-1) << ". Your " << caracName.at(x-1) << " modifier will be: " << m_modArray.at(x-1) << "\n\n";
 
             temp.pop_back();
             //--countDown;

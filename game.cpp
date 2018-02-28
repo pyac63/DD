@@ -30,10 +30,10 @@ bool game(Player* player)
     player->assignCaracAndMod();
     player->printCaracAndMod();
     Monster *monster = createMonster();
-    monster->setName("Beholder");
+    monster->setName("Goblin");
     monster->setHp(15);
     monster->setCa(12);
-    monster->setStr(13);
+    monster->setStr(5);
     while ((player->getHp()) > 0 && (monster->getHp() > 0))
     {
         //cout << monster->getCha() << '\n';
@@ -102,7 +102,7 @@ bool game(Player* player)
     }
     else
     {
-        cout << "You have been slayed...\n";
+        cout << "You have been slayed by the enemy " << monster->getName() << "...\n";
 
         delete monster;
         monster = nullptr;

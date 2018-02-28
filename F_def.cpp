@@ -11,6 +11,16 @@
 
 using namespace std;
 
+void intro()
+{
+    cout << "*\tGreetings Traveler !\n";
+    cout << "*\tYou are about to live an incredible adventure...\n";
+    cout << "*\tFull of explorations, combats, joy, pain and probably death.\n";
+    cout << "*\tWelcome to the magical world of\n\n\n";
+    cout << "*\tDUNGEONS & DRAGONS\n\n\n";
+    cout << "*\tBut first...let's talk a little bit about yourself...\n\n";
+}
+
 Player* createPlayer()
 {
     return new Player();
@@ -23,7 +33,9 @@ Monster* createMonster()
 
 string enterName()
 {
-    cout << "Enter your name: \n";
+    cout << "\n\nEven the lowest, talentless adventurer want to become famous\n";
+    cout << "And in order to enter the great legends, they need a name to be carved in stones...\n";
+    cout << "So tell me, Adventurer, what will be your name ?\n";
     string name;
     cin >> name;
     return name;
