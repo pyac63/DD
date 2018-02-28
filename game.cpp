@@ -28,8 +28,9 @@ bool game(Player* player)
         //cout << monster->getCha() << '\n';
         int newHp;
         int playerRoll = rollD20(p);
+        int playerAttack = playerRoll + player->getStrMod();
 
-        if (checkRollFail(playerRoll) || playerRoll < monster->getCa())
+        if (checkRollFail(playerRoll) || playerAttack < monster->getCa())
         {
             cout << "You miss...\n";
         }
@@ -45,6 +46,7 @@ bool game(Player* player)
 
             else
             {
+                cout << "Your attack roll is a " << playerAttack << endl;
                 cout << "You hit !\n";
                 newHp = (monster->getHp())-(player->getStr());
                 monster->setHp(newHp);
@@ -54,9 +56,10 @@ bool game(Player* player)
 
         if (monster->getHp() <= 0)
             break;
-        int monsterRoll = 20;
-        //int monsterRoll = rollD20(m);
-        if (checkRollFail(monsterRoll) || monsterRoll < player->getCa())
+        //int monsterRoll = 20;
+        int monsterRoll = rollD20(m);
+        int monsterAttack = monsterRoll + monster->getStrMod();
+        if (checkRollFail(monsterRoll) || monsterAttack < player->getCa())
         {
             cout << "Enemy miss...\n";
         }
@@ -71,6 +74,7 @@ bool game(Player* player)
 
             else
             {
+                cout << "Enemy attack roll is a " << monsterAttack << endl;
                 cout << "Enemy hit !\n";
                 newHp = (player->getHp())-(monster->getStr());
                 player->setHp(newHp);

@@ -172,6 +172,7 @@ int rollD20 (char character)
 
     }
 
+
     return result;
 
 
