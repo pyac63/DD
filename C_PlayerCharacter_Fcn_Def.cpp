@@ -21,12 +21,12 @@ void Player::assignWeapon (Weapon* &weaponToAssign)
 
 void Player::printWeapon()
 {
-    cout << "You will fight with a " << weapon->weaponName << '\n';
-    cout << "The damage die will be a d" << weapon->weaponDamageRoll << '\n';
+    cout << "You will fight with a " << weapon->getWeaponName() << '\n';
+    cout << "The damage die will be a d" << weapon->getWeaponDamageRoll() << '\n';
     if (weapon2 != nullptr)
     {
-        cout << "You will also fight with a " << weapon2->weaponName << '\n';
-        cout << "The damage die will be a d" << weapon2->weaponDamageRoll << '\n';
+        cout << "You will also fight with a " << weapon2->getWeaponName() << '\n';
+        cout << "The damage die will be a d" << weapon2->getWeaponDamageRoll() << '\n';
     }
 }
 
@@ -177,5 +177,42 @@ void Player::assignCaracAndMod()
 
 
     }
+}
+
+int Player::getWeaponDamage()
+{
+    int toReturn;
+    int die = weapon->getWeaponDamageRoll();
+    switch (die)
+    {
+    case 4:
+        toReturn = weapon->rollD4();
+        break;
+    case 6:
+        toReturn = weapon->rollD6();
+        break;
+    case 8:
+        toReturn = weapon->rollD8();
+        break;
+    case 10:
+        toReturn = weapon->rollD10();
+        break;
+    case 12:
+        toReturn = weapon->rollD12();
+        break;
+    case 66:
+        toReturn = weapon->rollD6()+weapon->rollD6();
+        break;
+    default:
+        toReturn  =weapon->rollD4();
+        break;
+    }
+    return toReturn;
+
+}
+
+int Player::getDamage()
+{
+    return getWeaponDamage()+m_modArray.at(0);
 }
 

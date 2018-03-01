@@ -1,7 +1,5 @@
 #include <iostream>
 #include <string>
-#include <random>
-#include <ctime>
 #include <chrono>
 #include <thread>
 #include "C_BaseCharacter.h"
@@ -82,12 +80,12 @@ void printMonster (const Monster &test)
     cout << test.getCa() << '\n';
 }
 
+
 int getRandomNumber(int min, int max)
 {
-	// Note: Due to a bug in the Code::Blocks compiler, if using Code::Blocks on Windows, delete the two lines above and uncomment this line:
-	static mt19937 mersenne(static_cast<unsigned int>(time(0))); // initialize our mersenne twister with a random seed
-	static const double fraction = 1.0 / (static_cast<double>(mersenne.max()) + 1.0);
-	return min + static_cast<int>((max - min + 1) * (mersenne() * fraction));
+    static std::mt19937 mersenne(static_cast<unsigned int>(time(0))); // initialize our mersenne twister with a random seed
+    static const double fraction = 1.0 / (mersenne.max() + 1.0);
+    return min + static_cast<int>((max - min + 1) * (mersenne() * fraction));
 }
 
 bool checkRollCrit(int x)
@@ -104,31 +102,6 @@ bool checkRollFail(int x)
         return true;
     else
         return false;
-}
-
-int rollD4()
-{
-    return getRandomNumber(1, 4);
-}
-
-int rollD6()
-{
-    return getRandomNumber(1, 6);
-}
-
-int rollD8()
-{
-    return getRandomNumber(1, 8);
-}
-
-int rollD10()
-{
-    return getRandomNumber(1, 10);
-}
-
-int rollD12()
-{
-    return getRandomNumber(1, 12);
 }
 
 int rollD20 (char character)

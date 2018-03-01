@@ -1,7 +1,5 @@
 #include <iostream>
 #include <string>
-#include <random>
-#include <ctime>
 #include <chrono>
 #include <thread>
 #include "F_decla.h"
@@ -29,6 +27,7 @@ bool game(Player* player)
         int newHp;
         int playerRoll = rollD20(p);
         int playerAttack = playerRoll + player->getStrMod();
+        int playerDamage = player->getDamage();
 
         if (checkRollFail(playerRoll) || playerAttack < monster->getCa())
         {
@@ -40,7 +39,9 @@ bool game(Player* player)
             if (checkRollCrit(playerRoll))
             {
                 cout << "You hit critically !!\n";
-                newHp = (monster->getHp())-((player->getStr())*2);
+                int crit = playerDamage+player->getDamage();
+                cout << "You dealt " << crit << " damages !\n";
+                newHp = (monster->getHp())-crit;
                 monster->setHp(newHp);
             }
 
@@ -48,6 +49,7 @@ bool game(Player* player)
             {
                 cout << "Your attack roll is a " << playerAttack << endl;
                 cout << "You hit !\n";
+                cout << "You dealt " << playerDamage << " damages.\n";
                 newHp = (monster->getHp())-(player->getStr());
                 monster->setHp(newHp);
             }
@@ -59,6 +61,7 @@ bool game(Player* player)
         //int monsterRoll = 20;
         int monsterRoll = rollD20(m);
         int monsterAttack = monsterRoll + monster->getStrMod();
+        //int monsterDamage =
         if (checkRollFail(monsterRoll) || monsterAttack < player->getCa())
         {
             cout << "Enemy miss...\n";

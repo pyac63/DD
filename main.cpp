@@ -18,12 +18,10 @@ int main()
     string name {enterName()};
     Player *player = createPlayer();
     player->setName(name);
-    player->setHp(1);
+    player->setHp(11);
     player->setCa(16);
-    Weapon *playerweapon = createWeapon(3);
-    Weapon *playerweapon2 = createWeapon(15);
+    Weapon *playerweapon = createWeapon(12);
     player->assignWeapon(playerweapon);
-    player->assignWeapon(playerweapon2);
     player->assignCaracRoll(getCaracRoll());
     player->assignCaracAndMod();
     player->printCaracAndMod();
@@ -35,8 +33,6 @@ int main()
 
     delete playerweapon;
     //playerweapon = nullptr;
-    delete playerweapon2;
-    //playerweapon2 = nullptr;
     delete player;
     //player = nullptr;
 

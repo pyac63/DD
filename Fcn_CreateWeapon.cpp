@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Str_Weapon.h"
+#include "C_Weapon.h"
 
 using namespace std;
 
@@ -7,7 +7,7 @@ Weapon* createWeapon(int x)
 {
     string name;
     int roll;
-    int rollversatile;
+    int rollversatile = 0;
     /*
         * Next bitset serves for the weapon's attributes,
         * Index are the followings:
@@ -287,6 +287,6 @@ Weapon* createWeapon(int x)
 
     }
 
-    return new Weapon{name, roll, 0, attributes};
+    return new Weapon{name, roll, rollversatile, attributes, commom, war};
 }
 

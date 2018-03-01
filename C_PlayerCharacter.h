@@ -4,7 +4,7 @@
 #include <iostream>
 #include <bitset>
 #include "C_BaseCharacter.h"
-#include "Str_Weapon.h"
+#include "C_Weapon.h"
 
 using namespace std;
 
@@ -86,5 +86,7 @@ public:
     int getCaracMod(int x);
     void assignCaracAndMod();
     int getInput1to6();
+    int getWeaponDamage();
+    int getDamage();
 };
 #endif // C_PLAYERCHARACTER_H

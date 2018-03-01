@@ -3,6 +3,8 @@
 #include <utility>
 #include "F_decla.h"
 
+
+
 using namespace std;
 
 vector<int> getCaracRoll()
